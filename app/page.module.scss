@@ -1,0 +1,78 @@
+.heroSection {
+  h1 {
+    font-size: 75px;
+    font-weight: thin;
+  }
+  a {
+    padding-bottom: 4px;
+    background-image: repeating-linear-gradient(
+        -45deg,
+        #ffb400,
+        #ffb400 1px,
+        transparent 0,
+        transparent 12px
+      ),
+      repeating-linear-gradient(
+        45deg,
+        #ffb400,
+        #ffb400 1px,
+        transparent 0,
+        transparent 12.2px
+      );
+    background-position: 0 103%, 2px 103%;
+    background-size: 17px 10px;
+    background-repeat: repeat-x;
+    animation: 0.8s infinite normal b;
+    animation-timing-function: ease;
+    animation-timing-function: linear;
+  }
+}
+
+@keyframes b {
+  0% {
+    background-position-x: 0, 2px;
+  }
+  to {
+    background-position-x: 17px, 19px;
+  }
+}
+
+@keyframes c {
+  0% {
+    background-position-x: 0, 0;
+  }
+  to {
+    background-position-x: 24px, -24px;
+  }
+}
+
+.gridSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+
+  .gridItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  img {
+    max-width: 200px;
+    height: auto;
+  }
+}
+
+.events {
+  padding: 50px 0;
+  background-image: linear-gradient(90deg, #000 50%, transparent 0),
+    linear-gradient(90deg, #000 50%, transparent 0),
+    linear-gradient(90deg, #000 50%, transparent 0),
+    linear-gradient(90deg, #000 50%, transparent 0);
+  background-position: 0 0, 0 100%, left 14px, 0 calc(100% - 14px);
+  background-repeat: repeat-x, repeat-x, repeat-x, repeat-x;
+  background-size: 24px 1px, 24px 1px, 24px 1px, 24px 1px;
+  animation: 0.8s infinite normal c;
+  animation-timing-function: ease;
+  animation-timing-function: linear;
+}

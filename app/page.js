@@ -1,95 +1,84 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Image from "next/image";
+import styles from "./page.module.scss";
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
+      <section className={styles.heroSection}>
+        <h1>
+          Ikigai Street Market is a carefully curated retail market, food hall &
+          community space open year-round at 265 Canal Street.&nbsp;
+          <a>Support Small Business</a> this weekend!
+        </h1>
         <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
+          src="/market-hero.jpg"
+          alt="Pau Fiaschi profile picture"
+          width={800}
+          height={451}
           priority
         />
-      </div>
+      </section>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+      <section>
+        <h2>A New Kind of Market</h2>
+        <div className={styles.gridSection}>
+          <div className={styles.gridItem}>
+            <Image
+              src="/sign1.jpg"
+              alt="Pau Fiaschi profile picture"
+              width={451}
+              height={850}
+              priority
+            />
+            <p>
+              Merging retail, food, art, and culture, Canal Street Market
+              highlights top retail and design concepts, restaurants, and
+              up-and-coming players in the downtown New York City community.
+            </p>
+          </div>
+          <div className={styles.gridItem}>
+            <Image
+              src="/sign2.jpg"
+              alt="Pau Fiaschi profile picture"
+              width={451}
+              height={850}
+              priority
+            />
+            <p>Retail Market Hours: Fri– Sun: 11:00AM - 7:00PM</p>
+          </div>
+          <div className={styles.gridItem}>
+            <Image
+              src="/sign3.jpg"
+              alt="Pau Fiaschi profile picture"
+              width={451}
+              height={850}
+              priority
+            />
+            <p>Food Hall Hours: Mon – Sun: 11:00AM - 8:00PM</p>
+          </div>
+        </div>
+      </section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+      <section>
+        <h2>Market Events</h2>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+        <div className={`${styles.gridSection} ${styles.events}`}>
+          <div className={styles.gridItem}>
+            <p>12/02</p>
+            <p>Small Business Retail Pop Up Weekend!</p>
+          </div>
+          <div className={styles.gridItem}>
+            <p>02/07</p>
+            <p>
+              New Balance x Paperboy Paris by Greenhouse @ Canal Street Market
+            </p>
+          </div>
+          <div className={styles.gridItem}>
+            <p>12/11</p>
+            <p>Hack City 12/11</p>
+          </div>
+        </div>
+      </section>
     </main>
-  )
+  );
 }
