@@ -7,6 +7,20 @@ $green: #aab03c;
   margin: 0;
   box-sizing: border-box;
 }
+.imageContainer {
+  width: 100%;
+
+  > div {
+    position: unset !important;
+  }
+
+  .image {
+    object-fit: contain;
+    width: 100% !important;
+    position: relative !important;
+    height: unset !important;
+  }
+}
 
 .heroSection {
   h1 {
@@ -34,6 +48,10 @@ $green: #aab03c;
     animation: 0.8s infinite normal b;
     animation-timing-function: ease;
     animation-timing-function: linear;
+  }
+
+  img {
+    margin-left: -5rem;
   }
 }
 
@@ -72,6 +90,7 @@ $green: #aab03c;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
   }
 
   img {
@@ -99,24 +118,26 @@ $green: #aab03c;
     font-size: 5.063rem;
   }
   h2 {
-    font-size: 3.375rem;
+    font-size: 7.6em;
   }
   h3 {
-    font-size: 2.25rem;
+    font-size: 3.375rem;
   }
   h1,
   h2,
   h3 {
     font-family: "Cormorant", serif;
+    font-weight: 300;
+    text-align: center;
   }
   section {
-    margin: 8rem 3rem;
+    margin: 10rem 3rem;
   }
   a {
     text-decoration: none;
   }
   p {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -204,7 +225,7 @@ $green: #aab03c;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 3rem;
-  background-color: $orange;
+  border-top: solid 1px black;
 
   a {
     display: inline-block;
